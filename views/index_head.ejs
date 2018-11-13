@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="FI">
+	<head>
+		<meta charset="UTF-8">
+		<title>Vucture</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+		<link rel="stylesheet" href="/Style/stylesheet.css">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+		
+		<script src="/Client.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<!-- BOOSTRAP -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	</head>
+	
+	<body>
+
+	<div id="loading-screen">
+		<div class="container h-100 d-flex justify-content-center align-items-center">
+				
+				<div id="loading-SVG" style=""><img src="/Style/Eclipse-1s-200px.svg"><br /><h5 class="text-center" style="position:relative;top:-105px;color:#18c7ff;">Loading</h5></div>		
+		</div>
+	</div>
+
+
+	<div id="wrap-whole" style="padding-top:56px;">
+
+	<nav id="top-navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+
+    <ul class="navbar-nav">
+	  
+	 
+		<%
+		if(currentSite == 'index') { %>
+			<li class="nav-item active">
+				<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			</li>
+		<% } else { %> 
+			<li class="nav-item">
+				<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			</li>
+		
+		<% }  %> 
+		
+		 <li class="nav-item">
+        <a class="nav-link" href="/#skills">Skills</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/#myStory">My story</a>
+      </li>
+
+	  <li class="nav-item">
+        <a class="nav-link" href="/#social">Social media</a>
+      </li>
+
+		
+		
+		<% if(currentSite == 'portfolio') { %>
+			<li class="nav-item active">
+				 <a class="nav-link" href="/portfolio">Portfolio</a>
+			</li>
+		<% } else { %> 
+			<li class="nav-item">
+				 <a class="nav-link" href="/portfolio">Portfolio</a>
+			</li>
+	<% } %>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/#experience">Experience</a>
+      </li>
+
+	   <li class="nav-item">
+        <a class="nav-link" href="/#contact">Contact</a>
+      </li>
+
+	 
+
+    </ul>
+	<ul class="navbar-nav ml-auto">
+
+				<% if(logged) { %><p class="tCenter margin-offset-1"> <a href="/cp">Tervetuloa takaisin, Tuisku</a> </p><% } else { %>
+
+        <a href="/auth/facebook">
+          <img class="mx-auto d-block" src="/Style/imgs/flogo_login.png" width="200px">
+        </a>
+
+  <% } %>
+  </ul>
+  </div>
+	</nav>
+
+
+
+

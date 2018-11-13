@@ -1,0 +1,54 @@
+﻿<% include cp_header %>
+
+
+
+<h1>Muokkaa näytettä</h1>
+
+
+<div id="entry-id" data-entry-id="<%- entry[0].id %>"></div>
+
+<div id="send-images">
+
+	<label for="sent-images">Lähetetyt kuvat</label>
+	<div id="sent-images"></div>
+
+
+	<!-- Large modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Valitse valmiiksi ladattuja kuva</button>
+
+<div id="image-browser-modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Browse all images</h5></div>
+	  <div class="modal-body">
+	  <div id="loading-SVG" class="mx-auto" style="width:100px"><img src="/Style/Eclipse-1s-200px.svg"></div>
+	  </div>
+    </div>
+  </div>
+</div>
+
+	<form>
+  <div class="form-group">
+<label for="image-input">Lähetä kuvia</label>
+    <input id="image-input" type="file" class="form-control-file">
+  </div>
+</form>
+</div>
+
+<label for="heading">Otsikko</label>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" id="heading" aria-describedby="basic-addon3" value="<%- entry[0].header %>">
+</div>
+
+<label for="summernote">Teksti</label>
+
+<div id="summernote"><%- entry[0].content %></div>
+
+<button id="btn-update" type="button" class="btn btn-success">Julkaise</button>
+
+<button id="btn-save-update" type="button" class="btn btn-warning">Tallenna muutokset</button>
+
+<script src="../NewEntry.js"></script>
+<script src="../ImageHandler.js"></script>
+
+<% include cp_footer %>

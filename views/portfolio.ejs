@@ -1,0 +1,34 @@
+<% include index_head %>
+
+<div class="container-fluid" style="padding-top:60px;">
+
+	<div class="row mx-auto">
+
+			<div class="col-12 mx-auto">
+			<h1 class="display-4 tCenter">Portfolio</h1>
+					<div class="spacer-md"></div>
+		</div>
+
+			<% if(entries.length > 0) {%>
+				<% for(var i = 0; i < entries.length; i++) {%>
+			
+						<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mx-auto">
+				<div class="card mb-3">
+				  <img class="card-img-top" src="<%- entries[i].banner %>" alt="">
+				  <div class="card-body">
+					<h5 class="card-title"><%- entries[i].header %></h5>
+					<p class="card-text"><%- entries[i].author %></p>
+					<p class="card-text"><small class="text-muted"><%- entries[i].date %></small></p>
+					<a href="/portfolio/entries?id=<%- entries[i].id %>">Read it here</a>
+				  </div>
+				</div>
+				</div>
+				<% } %>
+			<% } else { %>
+				<p style="color:red">I am sorry. Something went wrong or there is nothing to see in here.</p>
+
+			<% } %>
+	</div>
+</div>
+
+<% include index_footer %>
