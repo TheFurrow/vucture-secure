@@ -4,5 +4,5 @@ vs
 vs/*
 *.sqlite
 node_modules
-Conf/*
+#Conf/*
 views/Style/imgs/face_origin.*
