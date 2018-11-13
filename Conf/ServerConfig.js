@@ -4,11 +4,11 @@ var CertsLocations = {
 }
 
 var dbConnection = {
-    host: '',
-    user: '',
+    host: 'den1.mysql6.gear.host',
+    user: 'testydb',
     port: '3306',
-    password: '',
-    database: ''
+    password: 'Kh3XUW_9-680',
+    database: 'testydb'
 };
 
 var facebookAPI = {
