@@ -56,8 +56,9 @@ class Entry extends Database {
                 console.log(err);
                 return callback(false, err);
             }
+
+            });
         this.connection.end();
-        });
     }
 
     GetSinglePublishedEntry(object, callback) {

@@ -5,3 +5,4 @@ vs/*
 *.sqlite
 node_modules
 Conf/*
+views/Style/imgs/face_origin.*

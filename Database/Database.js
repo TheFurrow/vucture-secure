@@ -19,6 +19,9 @@ class Database {
                 console.log(Date() + ' // Error came up while connecting to database.\n'+err);
                 return;
             }
+            else {
+                console.log(Date() + ' // Connected to the database.');
+            }
         });
   }
 }
