@@ -100,7 +100,7 @@ app.get('/', function (req, res) {
                 res.render('index', { currentSite: pageName, randomWord: word, logged: logged, entries: rows });
             }
             else {
-                res.render('status-page', { status: false, rows: rows });
+                res.render('status-page', { status: false, msg: rows });
             }
           
         })
