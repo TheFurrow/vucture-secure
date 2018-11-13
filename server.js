@@ -292,6 +292,8 @@ app.get('*', function (req, res) {
     res.render('404');
 });
 
-app.listen(3000, function () {
-    console.log('Running server on 3000');
+var port = process.env.PORT || 3000;
+
+app.listen(port, function () {
+    console.log('Running server');
 });
